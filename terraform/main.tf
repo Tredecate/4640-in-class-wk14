@@ -77,7 +77,8 @@ resource "aws_route" "default_route" {
 
 # https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route_table_association
 resource "aws_route_table_association" "web" {
-  subnt_id      = aws_subnet.web.id
+  # Fixed Argument named subnt_id to subnet_id (error #3)
+  subnet_id      = aws_subnet.web.id
   route_table_id = aws_route_table.web.id
 }
 
