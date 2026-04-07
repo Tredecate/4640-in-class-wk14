@@ -70,7 +70,7 @@ resource "aws_route_table" "web" {
 # add route to to route table
 # https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route
 resource "aws_route" "default_route" {
-  route_tble_id         = aws_route_table.web.id
+  route_table_id         = aws_route_table.web.id
   destination_cidr_block = "0.0.0.0/0"
   gateway_id             = aws_internet_gateway.web-gw.id
 }
