@@ -3,3 +3,5 @@
 */.terraform
 
 key_data
+
+terraform.tfstate*
