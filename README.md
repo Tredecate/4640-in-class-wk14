@@ -1,8 +1,8 @@
 # 4640-make-up-terraform
-- Thomas De Zwart
+- Thomas de Zwart
 - Charley Liao
 ---
-TThe Terraform configuration used in the 4640 Make Up lab. The configuration has a few errors that need to be fixed in order for the lab to work properly. These errors are presented in the screenshots below, along with the fixes that were applied to resolve them.
+The Terraform configuration used in the 4640 Make Up lab. The configuration has a few errors that need to be fixed in order for the lab to work properly. These errors are presented in the screenshots below, along with the fixes that were applied to resolve them.
 
 ## Error 1
 ![error1](/.screenshots/error1.png)
@@ -11,7 +11,6 @@ Fixed default route by adding letter "a" to `route_table_id`
 ## Error 2
 ![error2](/.screenshots/error2.png)
 Fixed default route by adding letter "a" to `route_table_id`
-
 
 ## Error 3
 ![error3](/.screenshots/error3.png)
@@ -25,7 +24,9 @@ Fixed web-http ingress rule by adding letter "o" to `from_port`
 ![error5](/.screenshots/error5.png)
 Fixed invalid path by removing `/module` from `user_data` parameter.
 
-
 ## Error 6
 ![error6](/.screenshots/error6.png)
 Fixed undeclared resource in frontend module `subnet_id` variable. Changed `aws_sbnet.web.id` by adding "u" to `aws_subnet.web.id`.
+
+## It works :)
+![terraform apply](/.screenshots/it_works.png)
