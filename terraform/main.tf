@@ -135,7 +135,8 @@ module "frontend" {
   user_data              = file("${path.module}/module/scripts/cloud-init.yaml")
   key_name               = "aws-4640"
   vpc_security_group_ids = [aws_security_group.web.id]
-  subnet_id              = aws_sbnet.web.id
+  # Fix Error #6 aws_sbnet.web.id to aws_subnet.web.id
+  subnet_id              = aws_subnet.web.id
 }
 
 output "frontend" {
