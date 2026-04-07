@@ -132,7 +132,7 @@ module "frontend" {
   ec2_name               = "debian"
   ec2_role               = "frontend-server"
   ami                    = data.aws_ami.debian.id
-  user_data              = file("${path.module}/module/scripts/cloud-init.yaml")
+  user_data              = file("${path.module}/scripts/cloud-init.yaml")
   key_name               = "aws-4640"
   vpc_security_group_ids = [aws_security_group.web.id]
   # Fix Error #6 aws_sbnet.web.id to aws_subnet.web.id
